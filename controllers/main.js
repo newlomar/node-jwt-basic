@@ -16,7 +16,7 @@ const login = async (req, res) => {
     // just for demo using a basic string. For productions, we have to use long, complex and unguessabl string value.
     const token = jwt.sign({id, username}, process.env.JWT_SECRET, {expiresIn: '30d'})
 
-    res.status(200).json({msg: 'user create', token})
+    res.status(200).json({msg: 'user created', token})
 }
 
 const dashboard = async (req, res) => {
