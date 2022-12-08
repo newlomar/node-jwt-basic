@@ -31,7 +31,7 @@ const dashboard = async (req, res) => {
     try {
         const decoded = jwt.verify(token, process.env.JWT_SECRET)
     } catch (error) {
-        throw new CustomAPIError('Not authorized to access this route' ,401)
+        throw new CustomAPIError('Not authorized to access this route', 401)
     }
 
     const luckyNumber = Math.floor(Math.random() * 100)
